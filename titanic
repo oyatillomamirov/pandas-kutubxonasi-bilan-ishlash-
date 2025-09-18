@@ -1,0 +1,6 @@
+import pandas as pd
+
+DataFrame = pd.read_csv("titanic.csv")
+
+males=DataFrame[(DataFrame["sex"]=="male") & (DataFrame["home.dest"].str.contains("New York", na=False))]
+males = DataFrame[(DataFrame["sex"]== "female") & (DataFrame["home.dest"].str.contains("New York", na=False))]
